@@ -32,11 +32,13 @@ namespace ConsoleApplication
             Console.WriteLine(r);
         }
         static async Task<string> DownloadPage(string url)
-        {
+        {            
             using (var client = new HttpClient())
-            {
+            {                
+                client.DefaultRequestHeaders.Add("User-Agent",
+                    "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)");
                 using (var r = await client.GetAsync(new Uri(url)))
-                {
+                {                    
                     string result = await r.Content.ReadAsStringAsync();
                     return result;
                 }
