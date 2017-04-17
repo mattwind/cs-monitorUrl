@@ -20,8 +20,7 @@ namespace ConsoleApplication
                 {
                     // Add sku to list
                     list.Add(line);
-                    // Download task       
-                    Console.WriteLine(line);             
+                    // Download task                
                     ReadPage(line);             
                     Thread.Sleep(5000); 
                 }
