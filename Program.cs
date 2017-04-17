@@ -20,16 +20,17 @@ namespace ConsoleApplication
                 {
                     // Add sku to list
                     list.Add(line);
-                    // Download task                    
+                    // Download task       
+                    Console.WriteLine(line);             
                     ReadPage(line);             
                     Thread.Sleep(5000); 
                 }
             }
         }
-        static async void ReadPage(string url)
+        static async void ReadPage(string link)
         {
-            var r = await DownloadPage(url);            
-            Console.WriteLine(r.Substring(0, 50));
+            var r = await DownloadPage(link);            
+            Console.WriteLine(r);
         }
         static async Task<string> DownloadPage(string url)
         {
