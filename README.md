@@ -8,5 +8,5 @@ http://www.bestbuy.com/site/product/{SKU}.p?skuId={SKU}
 
 ## SKUS
 
-Nintendo Switch   5670003
-Mario Kart 8      5723304
+* 5670003 - Nintendo Switch
+* 5723304 - Mario Kart 8
